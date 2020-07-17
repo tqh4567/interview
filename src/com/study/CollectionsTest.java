@@ -6,18 +6,32 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class CollectionsTest {
     public static void main(String[] args) {
-//        int[] ints = {0, 0, 0, 0, 0, 0};
-        List<String> list = new ArrayList<>();
-        list.add("1_");
-        list.add("b");
-        list.add("c");
-        list.add("1_");
-        list.add("1_");
-        list.add("5_");
-        List<String> fromList = deleteElementFromList(list, "1_");
-        for (String el : fromList){
-            System.out.println("el = " + el);
+        TreeNode root = new TreeNode(3);
+        TreeNode right = new TreeNode(1);
+        TreeNode left = new TreeNode(3);
+        root.left = left;
+        root.right =right;
+        System.out.println("isSymmetric(root) = " + isSymmetric(root));
+    }
+    public static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    public static boolean isSymmetric(TreeNode root) {
+        if(root == null) return true;
+        return isSame(root.left,root.right);
+    }
+    static boolean isSame(TreeNode leftNode,TreeNode rightNode){
+        if(leftNode != null && rightNode != null) {
+            if (leftNode.val == rightNode.val) {
+                return isSame(leftNode.left, rightNode.right) && isSame(leftNode.right, rightNode.left);
+            }
+        }else if (leftNode == null && rightNode == null){
+            return true;
         }
+        return false;
     }
     public static List<String> deleteElementFromList(List<String> list,String target){
         /**
