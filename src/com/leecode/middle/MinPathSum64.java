@@ -1,4 +1,4 @@
-package com.study.middle;
+package com.leecode.middle;
 
 public class MinPathSum64 {
     /**

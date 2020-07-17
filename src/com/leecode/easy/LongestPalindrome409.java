@@ -1,4 +1,4 @@
-package com.study.easy;
+package com.leecode.easy;
 
 
 import java.util.Arrays;

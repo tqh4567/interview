@@ -1,4 +1,4 @@
-package com.study.middle;
+package com.leecode.middle;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.study.easy;
+package com.leecode.easy;
 
 public class MaxSubArray53 {
     public static int maxSubArray(int[] nums) {
