@@ -36,10 +36,7 @@ public class MaxLongSubString {
 //        return result;
 //    }
 
-    public static void main(String[] args) {
-        String s="aab";
-        System.out.println("lengthOfLongestSubstring(s) = " + lengthOfLongestSubstring(s));
-    }
+
     public static int lengthOfLongestSubstring(String s) {
         if(s.length()<1) return 0;
         int left = 0,right = 0;
@@ -60,5 +57,28 @@ public class MaxLongSubString {
             }
         }
         return Math.max(right-left,max);
+    }
+    public static void main(String[] args) {
+//        String s="aab";
+        int[] s ={10,9,2,5,3,4};
+        System.out.println("lengthOfLongestSubstring(s) = " + lengthOfLIS(s));
+    }
+    public static int lengthOfLIS(int[] nums) {
+        if(nums.length < 1) return 0;
+        int n = nums.length;
+        int[] dp = new int[n];
+        dp[0] = 1;
+        int max = 1;
+        for(int i = 1;i < n;i++){
+            int cur = 0;
+            for(int j = 0 ; j< i;j++){
+                if (nums[i] > nums[j]) {
+                    cur = Math.max(cur, dp[j]);
+                }
+            }
+            dp[i] = cur + 1;
+            max = Math.max(max,dp[i]);
+        }
+        return max;
     }
 }

@@ -6,12 +6,22 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class CollectionsTest {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        TreeNode right = new TreeNode(1);
-        TreeNode left = new TreeNode(3);
-        root.left = left;
-        root.right =right;
-        System.out.println("isSymmetric(root) = " + isSymmetric(root));
+//        TreeNode root = new TreeNode(3);
+//        TreeNode right = new TreeNode(1);
+//        TreeNode left = new TreeNode(3);
+//        root.left = left;
+//        root.right =right;
+//        System.out.println("isSymmetric(root) = " + isSymmetric(root));
+        System.out.println("tableSizeFor(3) = " + tableSizeFor(5));
+    }
+    public static int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        return  n + 1;
     }
     public static class TreeNode {
         int val;
