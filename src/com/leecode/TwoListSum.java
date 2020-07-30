@@ -13,6 +13,30 @@ public class TwoListSum {
         int[] ints = {6,6,3,2};
         System.out.println("args = " + maxProfit(ints));
     }
+    public ListNode rotateRight(ListNode head, int k) {
+        if(k==0||head==null){return head;}
+        int length=1;
+        ListNode two=head;
+        while(two.next!=null){
+            length++;
+            two=two.next;
+        }
+        int h=k%length;//取模之后，不管k是大于还是小于length都可以得到head是倒数第几位
+        if(h==0)
+        {return head;}
+        //定义两个辅助指针，指向需要断链的前一位和断链的位置
+        ListNode one=head;
+
+        int cs=length-h-1;//forfor循环指向断链位置的前一位
+        for(int a=1;a<=cs;a++)
+        {
+            one=one.next;
+        }
+        ListNode newHead=one.next;
+        one.next=null;
+        two.next=head;
+        return newHead;
+    }
     public int[] divingBoard(int shorter, int longer, int k) {
         if(k == 0) return new int[0];
         if(shorter == longer) return new int[]{k*shorter};

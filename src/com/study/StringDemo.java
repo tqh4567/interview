@@ -41,8 +41,9 @@ public class StringDemo {
 //        System.out.println(s1 == s4);//true
         int[] cons ={3,4,5,6,7,0,1,2};
 //        System.out.println("changeCons(cons,11) = " + changeCons(cons, 11));
-        System.out.println("searchIndex(cons,2) = " + searchIndex(cons, 7));
+//        System.out.println("searchIndex(cons,2) = " + searchIndex(cons, 7));
     }
+    /**
     public static int searchIndex(int[] nums,int target){
         int n = nums.length;
         int i = 0,j = n-1;
@@ -83,4 +84,5 @@ public class StringDemo {
         }
 
     }
+     **/
 }
