@@ -1,34 +1,27 @@
 package com.study;
 
 import com.sun.jmx.remote.internal.ArrayQueue;
+import com.utils.TreeNode;
 
 import java.util.*;
 
 public class TreeOrders {
     TreeNode treeNode = null;
     //二叉树的节点类型，定义内部类
-    private static class TreeNode{
-        int data;   //节点值
-        TreeNode leftChild;  //左孩子
-        TreeNode rightChild; //右孩子
-        public TreeNode(int data) {
-            this.data=data;
-        }
-    }
     public static TreeNode initTreeNode() {
         TreeNode treeNode = new TreeNode(3);
         TreeNode left = new TreeNode(2);
         TreeNode right = new TreeNode(5);
         TreeNode right_left = new TreeNode(4);
 //        TreeNode right_right = new TreeNode(9);
-        right.leftChild = right_left;
-//        right.rightChild = right_right;
+        right.left = right_left;
+//        right.right = right_right;
 //        TreeNode left_left = new TreeNode(1);
 //        TreeNode left_right = new TreeNode(3);
-//        left.leftChild = left_left;
-//        left.rightChild = left_right;
-        treeNode.leftChild = left;
-        treeNode.rightChild = right;
+//        left.left = left_left;
+//        left.right = left_right;
+        treeNode.left = left;
+        treeNode.right = right;
         return treeNode;
     }
 
@@ -70,12 +63,12 @@ public class TreeOrders {
         deque.push(root);
         while (!deque.isEmpty()){
             TreeNode node = deque.pop();
-            list.add(node.data);
-            if(node.rightChild != null){
-                deque.push(node.rightChild);
+            list.add(node.val);
+            if(node.right != null){
+                deque.push(node.right);
             }
-            if (node.leftChild!=null){
-                deque.push(node.leftChild);
+            if (node.left!=null){
+                deque.push(node.left);
             }
         }
         return list;
@@ -97,12 +90,12 @@ public class TreeOrders {
         while (!deque.isEmpty() || temp != null){
             while(temp != null){
                 deque.push(temp);
-                temp = temp.leftChild;
+                temp = temp.left;
             }
             temp = deque.pop();
-            list.add(temp.data);
-            if (temp.rightChild != null){
-                temp = temp.rightChild;
+            list.add(temp.val);
+            if (temp.right != null){
+                temp = temp.right;
             }else {
                 temp = null;
             }
@@ -125,17 +118,17 @@ public class TreeOrders {
         while (!deque.isEmpty() || temp != null){
             while(temp != null){
                 deque.push(temp);
-                temp = temp.leftChild;
+                temp = temp.left;
             }
             if (!deque.isEmpty()){
                 temp = deque.peek();
-                if (temp.rightChild == null || temp.rightChild == pre){
+                if (temp.right == null || temp.right == pre){
                     temp = deque.pop();
-                    list.add(temp.data);
+                    list.add(temp.val);
                     pre = temp;
                     temp = null;
                 }else {
-                    temp = temp.rightChild;
+                    temp = temp.right;
                 }
             }
 
@@ -149,12 +142,12 @@ public class TreeOrders {
         queue.add(root);
         while (!queue.isEmpty()){
             TreeNode node = queue.remove();
-            list.add(node.data);
-            if (node.leftChild!=null){
-                queue.add(node.leftChild);
+            list.add(node.val);
+            if (node.left!=null){
+                queue.add(node.left);
             }
-            if(node.rightChild != null){
-                queue.add(node.rightChild);
+            if(node.right != null){
+                queue.add(node.right);
             }
         }
         return list;
