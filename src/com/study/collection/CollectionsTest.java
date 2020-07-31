@@ -1,4 +1,4 @@
-package com.study;
+package com.study.collection;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
