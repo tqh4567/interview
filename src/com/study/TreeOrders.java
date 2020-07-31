@@ -1,48 +1,29 @@
 package com.study;
 
-import com.sun.jmx.remote.internal.ArrayQueue;
 import com.utils.TreeNode;
+import com.utils.TreeNodeUtils;
 
 import java.util.*;
 
 public class TreeOrders {
-    TreeNode treeNode = null;
-    //二叉树的节点类型，定义内部类
-    public static TreeNode initTreeNode() {
-        TreeNode treeNode = new TreeNode(3);
-        TreeNode left = new TreeNode(2);
-        TreeNode right = new TreeNode(5);
-        TreeNode right_left = new TreeNode(4);
-//        TreeNode right_right = new TreeNode(9);
-        right.left = right_left;
-//        right.right = right_right;
-//        TreeNode left_left = new TreeNode(1);
-//        TreeNode left_right = new TreeNode(3);
-//        left.left = left_left;
-//        left.right = left_right;
-        treeNode.left = left;
-        treeNode.right = right;
-        return treeNode;
-    }
-
     public static void main(String[] args) {
         System.out.println("先序遍历");
-        for (Integer i : getPreOrder(initTreeNode())){
+        for (Integer i : getPreOrder(TreeNodeUtils.initTreeNode())){
             System.out.print(i);
         }
         System.out.println("\n");
         System.out.println("中序遍历");
-        for (Integer i : getInOrder(initTreeNode())){
+        for (Integer i : getInOrder(TreeNodeUtils.initTreeNode())){
             System.out.print(i);
         }
         System.out.println("\n");
         System.out.println("后序遍历");
-        for (Integer i : postOrder(initTreeNode())){
+        for (Integer i : postOrder(TreeNodeUtils.initTreeNode())){
             System.out.print(i);
         }
         System.out.println("\n");
         System.out.println("层次遍历");
-        for (Integer i : levelOrder(initTreeNode())){
+        for (Integer i : levelOrder(TreeNodeUtils.initTreeNode())){
             System.out.print(i);
         }
     }
