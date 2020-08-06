@@ -1,6 +1,7 @@
 package com.study;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class StringDemo {
     public static void main(String[] args) {
@@ -40,8 +41,16 @@ public class StringDemo {
 //        String s4 = "a" + "bc";
 //        System.out.println(s1 == s4);//true
         int[] cons ={3,4,5,6,7,0,1,2};
-//        System.out.println("changeCons(cons,11) = " + changeCons(cons, 11));
-//        System.out.println("searchIndex(cons,2) = " + searchIndex(cons, 7));
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            if (a == 0 && b == 0) {
+                break;
+            } else {
+                System.out.println(a + b);
+            }
+        }
     }
     /**
     public static int searchIndex(int[] nums,int target){

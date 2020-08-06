@@ -169,7 +169,22 @@ public class TwoNumberSum {
 //        int[][] ints= {{1,2},{3,4}};
         int[] nums = {2,3,1,0,2,5,3};
         int a= (int) Math.sqrt(10);
-        System.out.println("isUnique(s1,s2) = " + isNumber(s1));
+//        System.out.println("isUnique(s1,s2) = " + isNumber(s1));
+        System.out.println("isUnique(s1,s2) = " + getTopNumber(3,3,4));
+    }
+    public static int getTopNumber(int m,int n,int k){
+        List<Integer> list = new ArrayList<>();
+        for(int i = 1;i<=m;i++){
+            for (int j = 1;j<= n;j++){
+                list.add(i*j);
+            }
+        }
+        int[] nums = new int[m*n];
+        for(int i = 0;i < m*n;i++){
+            nums[i] = list.get(i);
+        }
+        Arrays.sort(nums);
+        return nums[m*n-k];
     }
     public static boolean isNumber(String s) {
 
