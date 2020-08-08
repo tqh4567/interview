@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class SearchRange34 {
     public static int[] searchRange(int[] nums, int target) {

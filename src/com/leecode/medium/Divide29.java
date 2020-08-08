@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class Divide29 {
     public static int divide(int dividend, int divisor) {

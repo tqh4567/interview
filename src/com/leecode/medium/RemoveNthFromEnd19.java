@@ -1,6 +1,4 @@
-package com.leecode.middle;
-
-import com.sun.deploy.security.CredentialManager;
+package com.leecode.medium;
 
 public class RemoveNthFromEnd19 {
     // 静态内部类，定义链表节点类型

@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class ConvertZ06 {
     public static String convert(String s, int numRows) {

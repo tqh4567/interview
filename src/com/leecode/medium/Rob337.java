@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 import com.utils.TreeNode;
 

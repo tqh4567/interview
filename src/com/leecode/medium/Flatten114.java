@@ -1,9 +1,6 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 import com.utils.TreeNode;
-
-import java.util.ArrayDeque;
-import java.util.Deque;
 
 /**
  * 例如，给定二叉树

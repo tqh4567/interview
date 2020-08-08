@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class IntToRoman12 {
     public static String intToRoman(int num) {

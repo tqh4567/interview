@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 /**
  * 以 Unix 风格给出一个文件的绝对路径，你需要简化它。或者换句话说，将其转换为规范路径。

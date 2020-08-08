@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class SwapPairs24 {
     public static class ListNode {

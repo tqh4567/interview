@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class MyAtoi08 {
     public static int myAtoi(String str) {

@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class LongestPalindrome05 {
     // 性能最差 （找到所有的回文子串，比较长短，拿出最长的那个字串）

@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class RobotWalk62 {
     public static int uniquePaths(int m, int n) {

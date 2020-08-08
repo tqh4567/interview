@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class uniquePathsWithObstacles63 {
     public static int uniquePathsWithObstacles(int[][] obstacleGrid) {

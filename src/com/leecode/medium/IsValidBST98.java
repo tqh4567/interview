@@ -1,5 +1,4 @@
-package com.leecode.middle;
-
+package com.leecode.medium;
 
 import com.utils.TreeNode;
 
@@ -8,27 +7,29 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
-public class InorderTraversal94 {
-    public List<Integer> inorderTraversal(TreeNode root) {
-        if (root == null) return null;
+public class IsValidBST98 {
+    public boolean isValidBST(TreeNode root) {
         TreeNode temp = root;
-        List<Integer> res = new ArrayList<>();
         Deque<TreeNode> deque = new ArrayDeque<>();
-//        deque.push(root);
-        while (temp != null || !deque.isEmpty()){
+        List<Integer> list = new ArrayList<>();
+        while (!deque.isEmpty() || temp != null){
             while (temp != null){
                 deque.push(temp);
                 temp = temp.left;
             }
             temp = deque.pop();
-            res.add(temp.val);
+            list.add(temp.val);
             if (temp.right != null){
-                deque.push(temp.right);
+                temp = temp.right;
             }else {
                 temp = null;
             }
-
         }
-        return res;
+        for (int i = 1; i < list.size();i++){
+            if(list.get(i) < list.get(i-1)){
+                return false;
+            }
+        }
+        return true;
     }
 }

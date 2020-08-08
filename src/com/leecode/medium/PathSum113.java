@@ -1,7 +1,6 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 import com.utils.TreeNode;
-import com.utils.TreeNodeUtils;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

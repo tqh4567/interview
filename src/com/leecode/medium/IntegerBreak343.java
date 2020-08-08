@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class IntegerBreak343 {
     // 未考虑溢出情况

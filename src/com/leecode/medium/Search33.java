@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class Search33 {
     public int search(int[] nums, int target) {

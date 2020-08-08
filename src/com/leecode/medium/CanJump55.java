@@ -1,4 +1,4 @@
-package com.leecode.middle;
+package com.leecode.medium;
 
 public class CanJump55 {
     public static void main(String[] args) {
