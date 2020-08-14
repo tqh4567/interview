@@ -1,11 +1,9 @@
 package com.leecode.medium;
 
 import com.utils.TreeNode;
+import com.utils.TreeNodeUtils;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 public class PathSum113 {
     // 寻找所有路径指定为sum的路径，只能通过90%用例，太菜鸡了
@@ -48,7 +46,9 @@ public class PathSum113 {
     }
 
     public static void main(String[] args) {
-        System.out.println("pathSum(TreeNodeUtils.initTreeNode(),8) = " + pathSum(getTreeNode(), 1));
+        TreeNode root = TreeNodeUtils.initTreeNode();
+        PathSum113 pathSum = new PathSum113();
+        System.out.println(pathSum.pathSum3(root, 9));
     }
     public static TreeNode getTreeNode(){
         TreeNode root = new TreeNode(1);
@@ -76,5 +76,26 @@ public class PathSum113 {
             ans.add(list);
         }
         return ans;
+    }
+    // 回溯算法
+    public List<List<Integer>> pathSum3(TreeNode root, int sum) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) return res;
+        LinkedList<Integer> list = new LinkedList<>();
+        dfs(root,list,sum,res);
+        return res;
+    }
+
+    private void dfs(TreeNode root, LinkedList<Integer> list, int sum, List<List<Integer>> res) {
+        if (root == null) return;
+        list.add(root.val);
+        if (root.val == sum && root.left == null && root.right == null){
+            res.add(new ArrayList<>(list));
+        }else {
+            dfs(root.left,list,sum-root.val,res);
+            dfs(root.right,list,sum-root.val,res);
+        }
+        list.removeLast();
+
     }
 }

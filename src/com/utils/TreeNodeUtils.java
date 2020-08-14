@@ -1,6 +1,15 @@
 package com.utils;
 
 public class TreeNodeUtils {
+    /**
+     *                3
+     *              /    \
+     *             2      5
+     *            /  \   /  \
+     *           1    4  1  1
+     *
+     *
+     */
     public static TreeNode initTreeNode() {
         TreeNode treeNode = new TreeNode(3);
         TreeNode left = new TreeNode(2);
