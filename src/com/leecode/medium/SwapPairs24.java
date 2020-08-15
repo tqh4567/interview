@@ -1,11 +1,8 @@
 package com.leecode.medium;
 
+import com.utils.ListNode;
+
 public class SwapPairs24 {
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
     // 两两交换链表中的节点
     public static ListNode swapPairs(ListNode head) {
         ListNode dummyNode = new ListNode(0);

@@ -1,12 +1,8 @@
 package com.leecode.medium;
 
+import com.utils.ListNode;
+
 public class RemoveNthFromEnd19 {
-    // 静态内部类，定义链表节点类型
-    public static class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
-    }
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null || n < 1) return head;
         ListNode node = new ListNode(0);
