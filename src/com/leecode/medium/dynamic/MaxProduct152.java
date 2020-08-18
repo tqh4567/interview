@@ -1,4 +1,4 @@
-package com.leecode.medium;
+package com.leecode.medium.dynamic;
 
 import java.util.Arrays;
 
