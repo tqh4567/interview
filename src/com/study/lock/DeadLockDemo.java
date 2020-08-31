@@ -20,7 +20,6 @@ class LockThread implements Runnable{
                 System.out.println(Thread.currentThread().getName()+"拿到了\t " + lockB);
             }
         }
-
     }
 }
 public class DeadLockDemo {

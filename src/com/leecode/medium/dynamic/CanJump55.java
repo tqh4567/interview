@@ -17,9 +17,7 @@ public class CanJump55 {
             }else{
                 dp[i] = Math.max(nums[i] + i,dp[i-1]);
             }
-        }
-        for(int j = 0;j<n-1;j++){
-            if(dp[j] >= n-1){
+            if (dp[i] >= n-1){
                 return true;
             }
         }

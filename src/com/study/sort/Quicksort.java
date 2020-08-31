@@ -1,6 +1,13 @@
 package com.study.sort;
 
 public class Quicksort {
+    public static void main(String[] args) {
+        int[] nums = {6,5,4,3,2};
+        quickSort(nums,0,nums.length-1);
+        for (int num : nums){
+            System.out.print(num + " ");
+        }
+    }
     public static void quickSort(int a[],int l,int r){
         if(l>=r)
             return;
