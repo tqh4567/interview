@@ -60,6 +60,19 @@ public class LevelOrder102 {
                 list = new ArrayList<>();
             }
         }
+        for(int i = 0;i < res.size();i++){
+            if(i % 2 == 1){
+                int m = 0,n = res.get(i).size()-1;
+                while(m < n){
+                    int t = res.get(i).get(m);
+                    int t1 = res.get(i).get(n);
+                    res.get(i).set(m,t1);
+                    res.get(i).set(n,t);
+                    m++;
+                    n--;
+                }
+            }
+        }
         return res;
     }
 
